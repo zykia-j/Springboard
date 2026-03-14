@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Meme Generator</h1>
+    <p class="sub">Paste an image URL, add your text, and hit Generate.</p>
+  </header>
+
+  <div class="wrap">
+    <form class="meme-form" id="memeForm" novalidate>
+      <div class="field half">
+        <label for="topText">Top text</label>
+        <input type="text" id="topText" placeholder="e.g. One does not simply…" required>
+      </div>
+
+      <div class="field half">
+        <label for="bottomText">Bottom text</label>
+        <input type="text" id="bottomText" placeholder="e.g. …walk into Mordor" required>
+      </div>
+
+      <div class="field">
+        <label for="imageUrl">Image URL</label>
+        <input type="url" id="imageUrl" placeholder="https://example.com/image.jpg" required>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Generate Meme</button>
+        <span class="hint">Press <kbd>Esc</kbd> to clear the form.</span>
+      </div>
+    </form>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <div id="memeGrid" class="meme-grid"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
